@@ -16,14 +16,29 @@ class User:
             print( "We cannot process your withdrawal." )
             print( f"You currently have {self.balance}." )
             print( f"And you are trying to withdraw {amount}." )
+        return self
 
     def display_User_Balance(self):
         print( f"User Name: {self.owner}, Balance: ${self.balance}." )
+        return self
 
     def deposit( self, amount ):
         self.balance += amount
+        return self
+
+    def validateFunds(self, amount):
+        if self.balance > amount:
+            return True
+        else:
+            return False
+        return self
 
     def transfer_Money(self, owner, amount):
-        self.balance -= amount
+        if self.validateFunds(amount):
+            self.make_withdrawal( amount )
+            owner.deposit( amount )
+        else:
+            print( "You don't have enough funds to transfer." )
+        return self
 
 
