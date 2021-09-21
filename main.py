@@ -1,0 +1,22 @@
+from user import User
+
+juanAccount = User(12345, "Juan Sanchez")
+mariaAccount = User(55555, "Maria Diaz ")
+gabrielaAccount = User(77777, "Gabriela Lopez")
+
+#print(User.allUsersAccount)
+juanAccount.deposit(100)
+juanAccount.deposit(100)
+juanAccount.deposit(100)
+juanAccount.make_withdrawal(200.0)
+juanAccount.display_User_Balance()
+mariaAccount.deposit(200)
+mariaAccount.deposit(200)
+mariaAccount.make_withdrawal(100.0)
+mariaAccount.make_withdrawal(100.0)
+mariaAccount.display_User_Balance()
+gabrielaAccount.deposit(1000)
+gabrielaAccount.make_withdrawal(100.0)
+gabrielaAccount.make_withdrawal(100.0)
+gabrielaAccount.make_withdrawal(100.0)
+gabrielaAccount.display_User_Balance()
